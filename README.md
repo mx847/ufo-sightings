@@ -15,6 +15,6 @@ This dataset starts where that version left off in 2014.  It is formatted and or
 
 **durationNumber and durationUnit** The number and time unit extracted from the original duration field using regex.  Included if the user wants to do their own time calculations or for further inspection/manipulation
 
-## Geocoding details
+### Geocoding details
 For simplicity, the geocoding effort was limited to locations in the US.  Latitude and longitude was determined using this file
 https://github.com/kelvins/US-Cities-Database, and the remaining missing locations were geocoded using an ESRI api via the geocoder python package (https://github.com/DenisCarriere/geocoder). This method didn't require an API key, used fuzzy matching, and didn't require a street address.  The resulting coordinates were then clipped using geopandas and a US border shapefile to remove any incorrect matches that were outside of the US.
